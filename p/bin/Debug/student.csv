@@ -1,0 +1,184 @@
+xfa:datasets/xfa:data/form1/Page01/subQuestion01/subCheckBoxes/cbIntPostGrad,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion01/subCheckBoxes/cbEntry,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion01/subCheckBoxes/cbNortheast,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion01/subCheckBoxes/cbIntGrad,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion01/subCheckBoxes/cbHealth,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion01/subCheckBoxes/cbSkilled,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion01/subCheckBoxes/cbEESkilled,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion01/subCheckBoxes/cbEEHealth,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion01/subCheckBoxes/cbEEIntGrad,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion01/subCheckBoxes/cbEEIntPostGrad,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion01/HsubExpressEntry/ExpressEntryNumber,E-,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion01/HsubExpressEntry/cbFedSkilledWorker,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion01/HsubExpressEntry/cbFedSkilledTrades,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion01/HsubExpressEntry/cbCanExperience,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion02/FamilyName,Sun,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion02/GivenName,Kewen,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion02/BirthDate,29-Mar-1989,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion02/CitizenshipCountry,China,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion02/cbMale,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion02/cbFemale,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion03/HomePh,778 918-9329,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion03/Email,jackyzhang1969@outlook.com,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion04/Address,1411 Garibaldi Pl,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion04/City,Coquitlam,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion04/ProvState,BC,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion04/Country,Canada,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion04/PCode,V3E 2S6,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion05/Address,15-5655 Chaffev Avenue,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion05/City,Burnaby,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion05/ProvState,BC,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion05/Country,Canada,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion05/PCode,V5H 2S1,Text
+xfa:datasets/xfa:data/form1/Page01/Question06,Burnaby,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion07/cbYes,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion07/cbNo,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion08/cbYes,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion08/cbNo,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion09/cbYes,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion09/cbNo,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion11/subQ11/cbYes,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion11/subQ11/cbNo,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion11/HsubIndicateStatus/cbVisitor,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion11/HsubIndicateStatus/cbStudent,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion11/HsubIndicateStatus/cbWorker,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion11/HsubIndicateStatus/HddWorker1,Other / Open (no employer specified),Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion11/HsubIndicateStatus/HsubIfWorker/ClientID,90665206,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion11/HsubIndicateStatus/HsubIfWorker/DateSigned,19-Jan-2015,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion11/HsubIndicateStatus/HsubIfWorker/ValidUntil,19-Jan-2018,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/subQ12/cbYes,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/subQ12/cbNo,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/Reason,Study,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/Visited,BC,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/EntryDate,Jul-2013,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/ExitDate,Mar-2014,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/Reason,Study,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/Visited,BC,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/EntryDate,Mar-2014,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/ExitDate,Apr-2014,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/Reason,Study,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/Visited,BC,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/EntryDate,Apr-2014,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/ExitDate,Dec-2014,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/Reason,Study,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/Visited,BC,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion12/HsubIfYes/subColumns/EntryDate,Dec-2014,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion13/cbSGood,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion13/cbSModerate,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion13/cbSMinimal,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion13/cbRGood,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion13/cbRModerate,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion13/cbRMinimal,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion13/cbWGood,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion13/cbWModerate,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion13/cbWMinimal,0,Text
+xfa:datasets/xfa:data/form1/Page01/HsubQuestion14/cbInterEng,1,Text
+xfa:datasets/xfa:data/form1/Page01/HsubQuestion14/cbCdnEng,0,Text
+xfa:datasets/xfa:data/form1/Page01/HsubQuestion14/cbFrench,0,Text
+xfa:datasets/xfa:data/form1/Page01/HsubQuestion14/Speaking,7.0,Text
+xfa:datasets/xfa:data/form1/Page01/HsubQuestion14/Listening,8.0,Text
+xfa:datasets/xfa:data/form1/Page01/HsubQuestion14/Reading,7.0,Text
+xfa:datasets/xfa:data/form1/Page01/HsubQuestion14/Writing,7.5,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/subDegreeBC/cbYes,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/subDegreeBC/cbNo,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/HsubIfYesBC/subEducationBC/From,Aug-2013,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/HsubIfYesBC/subEducationBC/To,Dec-2014,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/HsubIfYesBC/subEducationBC/Institution,Simon Fraser University,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/HsubIfYesBC/subEducationBC/ddLevel,Master's Degree,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/HsubIfYesBC/subEducationBC/ddField,Education,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/subDegreeCanada/cbYes,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/subDegreeCanada/cbNo,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/Elementary,6,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/Secondary,6,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/University,6,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/subSecondary/From,Sep-2005,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/subSecondary/To,Jun-2008,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/subSecondary/Institution,Harbin No. 14 Secondary School,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/subSecondary/ddLevel,Yes,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/subPostSecondary/From,Sep-2008,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/subPostSecondary/To,Jun-2012,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/subPostSecondary/Institution,Heilongjiang University,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/subPostSecondary/ddLevel,Bachelor's Degree,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/subPostSecondary/ddField,Other,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion15/subPostSecondary/Field,English,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion16/subQ16/cbYes,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion16/subQ16/cbNo,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion16/HsubIfYes/subColumns/cbMale,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion16/HsubIfYes/subColumns/cbFemale,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion17/subQ17/cbYes,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion17/subQ17/cbNo,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion17/HsubIfYes/cbMale,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion17/HsubIfYes/cbFemale,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion17/HsubIfYes/subSCLemployed/subSCL/cbYes,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion17/HsubIfYes/subSCLemployed/subSCL/cbNo,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion18/subQ18/cbYes,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion18/subQ18/cbNo,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion18/HsubIfYes/subChild/cbMale,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion18/HsubIfYes/subChild/cbFemale,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion19/subQ19/cbYes,1,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion19/subQ19/cbNo,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/JobTitle, Language instructor,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/DateFrom,01-Dec-2014,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Company,Richmond Institute of Languages,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Address,#3130-8788 McKim Way,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/City,Richmond,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/ProvState,BC,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Country,Canada,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/PCode,V6X 4E2,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Website,http://www.victoredugroup.com/,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/PhoneNo,604-204-0422,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Responsibilities, Teach local and international students English as ESL and English test preparation programs by plan of lectures, demonstrations, field assignments or group projects; teach local students English or subjects as after-school program Coordinate between newly come students and administration; assist administrators to arrange placement test for prospects; Develop courses, prepare teaching materials and outlines, and establish complete curricular for new programs or existed programs;  Focus on instructing students in listening, speaking, reading, writing and grammar curricular by using your skills and previous teaching experience Edit and modify all essays written by students who learn both from you and/or from others Evaluate students' progress, assign homework, prepare quiz and mark test Provide students customized tutoring services according to varied requirements Perform other reasonable duties as assigned by the director of school.,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/subLayer/HsubEmployeesPublic/cbNo,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/subLayer/HsubEmployeesPublic/cbYes,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/JobTitle, Language instructor,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/DateFrom,01-Jun-2014,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/DateTo,30-Nov-2014,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Company,Victor College,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/subEntRegOnly/ActivitiesEntre,Victor College has been in operation since 2003 and has helped many students achieve success in the area of test preparation such as TOEFL, IELTS, CELPIP, GMAT and GRE. The company provides ESL classes and Chinese courses for adult learners and K-12. The customer base are Chinese new immigrants, their children, and international students, who want to achieve both their personal and academic goals by choosing learning in Victor College.,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/subEntRegOnly/ERE_EconomicSector,Educational Services,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Address,#288-1338 West Broadway,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/City,Vancouver,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/ProvState,BC,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Country,Canada,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/PCode,V6H 1H2,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Website,http://www.victoredugroup.com/,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/PhoneNo,604-687-8608,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Responsibilities,During this period, I worked as a sub-contractor, the main responsibilities are: Teach local and international students English as ESL and English test preparation programs by plan of lectures, demonstrations, field assignments or group projects; teach local students English or subjects as after-school program Coordinate between newly come students and administration; assist administrators to arrange placement test for prospects; Develop courses, prepare teaching materials and outlines, and establish complete curricular for new programs or existed programs;  Focus on instructing students in listening, speaking, reading, writing and grammar curricular by using your skills and previous teaching experience,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/subLayer/HsubEmployeesPublic/cbNo,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/subLayer/HsubEmployeesPublic/cbYes,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/JobTitle, Language instructor,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/DateFrom,01-Feb-2014,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/DateTo,31-May-2014,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Company,Victor College,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/subEntRegOnly/ActivitiesEntre,Victor College has been in operation since 2003 and has helped many students achieve success in the area of test preparation such as TOEFL, IELTS, CELPIP, GMAT and GRE. The company provides ESL classes and Chinese courses for adult learners and K-12. The customer base are Chinese new immigrants, their children, and international students, who want to achieve both their personal and academic goals by choosing learning in Victor College.,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/subEntRegOnly/ERE_EconomicSector,Educational Services,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Address,#288-1338 West Broadway,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/City,Vancouver,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/ProvState,BC,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Country,Canada,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/PCode,V6H 1H2,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Website,http://www.victoredugroup.com/,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/PhoneNo,604-687-8608,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Responsibilities,During this period, I worked as a volunteer, the main responsibilities are: Teach local and international students English as ESL and English test preparation programs by plan of lectures, demonstrations, field assignments or group projects; teach local students English or subjects as after-school program Coordinate between newly come students and administration; assist administrators to arrange placement test for prospects; Develop courses, prepare teaching materials and outlines, and establish complete curricular for new programs or existed programs;  Focus on instructing students in listening, speaking, reading, writing and grammar curricular by using your skills and previous teaching experience,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/subLayer/HsubEmployeesPublic/cbNo,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/subLayer/HsubEmployeesPublic/cbYes,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/JobTitle, Language instructor,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/DateFrom,01-Oct-2010,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/DateTo,19-Jul-2013,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Company,New Oriental Education & Technology Group,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/subEntRegOnly/ActivitiesEntre,New Oriental Education & Technology Group is the largest and most famous Language teaching company, which covers all the Chinese major cities and some international cites. It provides teaching services of TOFEL, IELTS, China College English levels Test, Master admission English Test, and various English learning courses. The customer base spans from kinder garden to post graduate students, as well as people intending to improve English.,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/subEntRegOnly/ERE_EconomicSector,Educational Services,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Address,379 Xidazhi Street,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/City,Harbin,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/ProvState,Heilongjiang,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Country,China,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/PCode,150080,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Website,http://heb.xdf.cn,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/PhoneNo,+86-451-87513880,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/Responsibilities,From Oct 1, 2010 to June, 2012, I was a part time employee, and from Jun, 2012 to July 2013, I was a full time employee, with main responsibilities as following:. Teach local and international students English as ESL and English test preparation programs by plan of lectures, Giving English courses involved a range of skill-developing activities for speaking,writing,reading and listening. Communicating with learners from elementary school age through adulthood. Mentoring 11 staff members on English writing class procedure. Planing and supervising group projects and events. Attending and lecturing professional development workshops.,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/subLayer/HsubEmployeesPublic/cbNo,0,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion20/subJobTitle/subLayer/HsubEmployeesPublic/cbYes,0,Text
+xfa:datasets/xfa:data/form1/Page01/Elementary,41000,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion23/txtQ22,Friends/Family,Text
+xfa:datasets/xfa:data/form1/Page01/subQuestion23/cbOther,0,Text
+xfa:datasets/xfa:data/form1/Page01/subDeclaration/DateSignedApp,13-Feb-2015,Text

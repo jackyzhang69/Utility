@@ -1,0 +1,20 @@
+C:\Users\jacky\AppData\Local\Temporary Projects\p\bin\Debug\p.exe.config
+C:\Users\jacky\AppData\Local\Temporary Projects\p\obj\Debug\p.csprojResolveAssemblyReference.cache
+C:\Users\jacky\AppData\Local\Temporary Projects\p\bin\Debug\p.exe
+C:\Users\jacky\AppData\Local\Temporary Projects\p\bin\Debug\p.pdb
+C:\Users\jacky\AppData\Local\Temporary Projects\p\bin\Debug\Aspose.Pdf.dll
+C:\Users\jacky\AppData\Local\Temporary Projects\p\obj\Debug\p.exe
+C:\Users\jacky\AppData\Local\Temporary Projects\p\obj\Debug\p.pdb
+C:\GitHub\Utility\p\p\bin\Debug\p.exe.config
+C:\GitHub\Utility\p\p\obj\Debug\p.exe
+C:\GitHub\Utility\p\p\obj\Debug\p.pdb
+C:\GitHub\Utility\p\p\bin\Debug\p.exe
+C:\GitHub\Utility\p\p\bin\Debug\p.pdb
+C:\GitHub\Utility\p\p\bin\Debug\Aspose.Pdf.dll
+C:\GitHub\Utility\p\bin\Debug\p.exe.config
+C:\GitHub\Utility\p\obj\Debug\p.exe
+C:\GitHub\Utility\p\obj\Debug\p.pdb
+C:\GitHub\Utility\p\bin\Debug\p.exe
+C:\GitHub\Utility\p\bin\Debug\p.pdb
+C:\GitHub\Utility\p\bin\Debug\Aspose.Pdf.dll
+C:\GitHub\Utility\p\obj\Debug\p.csprojResolveAssemblyReference.cache
