@@ -135,6 +135,7 @@ namespace p
             }
             else if(Args[0].ToUpper() == "-LS")
             {
+
                 foreach(string str in output) Console.WriteLine(str.Replace("Aspose.Pdf.InteractiveFeatures.Forms.", ""));
             }
         }
