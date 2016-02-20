@@ -23,9 +23,9 @@ namespace p
             license.SetLicense("p.Aspose.Pdf.lic");
             // Set the value to indicate that license will be embedded in the application
             license.Embedded = true;
-           
-            Args = args;
 
+            Args = args;
+            
             if(args.Length ==0) gethelp();
             else
             {
@@ -46,7 +46,7 @@ namespace p
                           
                             case 3:
                             case 4:
-                                try { getlist(); Output(); Console.WriteLine(Args[2] + " was created!"); }
+                                try { getlist(args[1]); Output(); Console.WriteLine(Args[2] + " was created!"); }
                                 catch(Exception e) { Console.WriteLine(e.Message); }
                                 break;
                             default:
@@ -58,7 +58,7 @@ namespace p
                         break;
                     
                     case "-LS":  //List fields to screen
-                        if(args.Length == 2) { getlist(); Output(); }
+                        if(args.Length == 2) { getlist(args[1]); Output(); }
                         else if (args.Length>2) Console.WriteLine("You entered too many parameters!\nUsage: p -ls input.pdf");
                         else Console.WriteLine("You have to assign a pdf file name!");
                         break;
@@ -89,6 +89,13 @@ namespace p
                             setPDFInfo(args[1],info);
                             Console.WriteLine("File " + args[1] + " has been set a new set information!\nUse p -gi "+args[1]+" to check the update");
                         }
+                        break;
+                    case "-C":
+                        if(args.Length != 3) Console.WriteLine("Wrong parameter numbers.");
+                        else copyPDFs(args[1], args[2]);
+                        break;
+                    case "-CP":
+                        DiffPDFs.copy(args[1],args[2]);
                         break;
                     case "-SF": // Keep working ....
                         getSelectedList("Author","Jacky");
@@ -126,7 +133,7 @@ namespace p
 
       
 
-        private static void getlist()
+        private static void getlist(string filename)
         {
             //open document
 
@@ -134,7 +141,7 @@ namespace p
             // Check form tyep. There are: Standard 0, Static 1, Dynamic 2 (1 & 2 is XFA)
             bool isXFAForm = (pdfDocument.Form.Type == FormType.Static || pdfDocument.Form.Type == FormType.Dynamic) ? true:false;
             
-            Console.WriteLine("Form "+Args[1]+" is a "+ pdfDocument.Form.Type+" PDF file"); 
+            Console.WriteLine("Form "+filename+" is a "+ pdfDocument.Form.Type+" PDF file"); 
 
             List<Field> listFields = new List<Field>();
                   
@@ -154,23 +161,20 @@ namespace p
 
                 }
 
-               // Output();
-
             }
             else  // if it's a XFA form
             {
-               
-                foreach(string formField in pdfDocument.Form.XFA.FieldNames)
-                    output.Add(formField + "," + pdfDocument.Form.XFA[formField]); // + "," + pdfDocument.Form.XFA[formField].GetType().ToString());
-                
 
-                if(Args.Length ==4 && Args[3].ToUpper() == "-XML" && pdfDocument.Form.XFA != null)
+                if(Args.Length == 4 && Args[3].ToUpper() == "-XML" && pdfDocument.Form.XFA != null)
                 {
                     //get field data
                     XmlNode data = pdfDocument.Form.XFA.Datasets;
                     //enumerate fields
                     enumFields(data, "");
-
+                }
+                else {
+                    foreach(string formField in pdfDocument.Form.XFA.FieldNames)
+                        output.Add(formField + "," + pdfDocument.Form.XFA[formField]); // + "," + pdfDocument.Form.XFA[formField].GetType().ToString());
                 }
 
             }
@@ -181,6 +185,55 @@ namespace p
 
 
          }
+
+        private static List<string> getlist1(string filename)
+        {
+            //open document
+            List<string> returnValue = new List<string>();
+            Document pdfDocument = new Document(Args[1]);
+            // Check form tyep. There are: Standard 0, Static 1, Dynamic 2 (1 & 2 is XFA)
+            bool isXFAForm = (pdfDocument.Form.Type == FormType.Static || pdfDocument.Form.Type == FormType.Dynamic) ? true : false;
+
+            Console.WriteLine("Form " + filename + " is a " + pdfDocument.Form.Type + " PDF file");
+
+            List<Field> listFields = new List<Field>();
+
+            if(!isXFAForm) //if not a XFA form
+            {
+                foreach(Field formField in pdfDocument.Form)
+                {
+                    // Recursively iterate to get all fields
+                    getField(formField, ref listFields);
+
+                }
+
+                foreach(Field str in listFields)
+                {
+
+                    returnValue.Add(str.FullName + "," + str.Value + "," + str.GetType().ToString());
+
+                }
+
+            }
+            else  // if it's a XFA form
+            {
+
+                if(Args.Length == 4 && Args[3].ToUpper() == "-XML" && pdfDocument.Form.XFA != null)
+                {
+                    //get field data
+                    XmlNode data = pdfDocument.Form.XFA.Datasets;
+                    //enumerate fields
+                    returnValue=enumFields1(data, "");
+                }
+                else
+                {
+                    foreach(string formField in pdfDocument.Form.XFA.FieldNames)
+                        returnValue.Add(formField + "," + pdfDocument.Form.XFA[formField]); // + "," + pdfDocument.Form.XFA[formField].GetType().ToString());
+                }
+
+            }
+            return returnValue;
+        }
 
         private static void Output()
         {
@@ -230,8 +283,28 @@ namespace p
             else if(node.NodeType==XmlNodeType.Text){
                 output.Add(path+","+node.Value+","+node.NodeType);
             }
+        }
 
-           
+        private static List<string> enumFields1(XmlNode node, string path)
+        {
+            List<string> returnValue = new List<string>();
+            //if this node has subnodes then call this routine recruively
+            if(node.NodeType == XmlNodeType.Element && node.HasChildNodes)
+            {
+                string subPath;
+                //path for the subfield
+                if(path == "") subPath = node.Name;
+                else subPath = path + "/" + node.Name;
+
+                foreach(XmlNode subNode in node.ChildNodes) enumFields1(subNode, subPath);
+            }
+            //if this text node then show field information
+            else if(node.NodeType == XmlNodeType.Text)
+            {
+                returnValue.Add(path + "," + node.Value + "," + node.NodeType);
+            }
+
+            return returnValue;
         }
 
         private static void gethelp()
@@ -318,6 +391,62 @@ namespace p
                 }
             }
 
+        }
+        private static void copyPDFs(string source, string dest) {
+
+            Dictionary<string, string> sourcePDF = new Dictionary<string, string>();
+            Dictionary<string, string> DestPDF = new Dictionary<string, string>();
+            List<string> destList = new List<string>();
+
+            getlist(source);  // get source field names and values to dictionary sourcePDF
+            foreach(string str in output) {
+                sourcePDF.Add(sep(str, ',')[0],sep(str, ',')[1]);
+                //Console.WriteLine(sep(str,',')[0] + "\t\t\t" + sep(str, ',')[1]); //split to two string with first ','
+            }
+
+            destList= getlist1(dest);  // get destination pdf field names and values to the global string list: output
+
+            int i = 0;
+            foreach(string str in destList) {   //output list is now loaded destination pdf file fields and values
+                foreach(KeyValuePair<string, string> kvpsource in sourcePDF) {
+                    //copy source field name and value to dest dictionary
+                    if(sep(str, ',')[0] == kvpsource.Key) DestPDF.Add(kvpsource.Key, kvpsource.Value); 
+                    
+                }
+            }
+
+            try
+            {
+                Fill.fillForm(dest, DestPDF);
+                Console.WriteLine("Has completed to copy {0} to {1} !",source,dest);
+            }
+            catch(Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+            
+
+        }
+
+        private static string[] sep(string s, char c)  // seperate one string to two with a char
+        {
+            string[] outnew = new string[2];
+            int l = s.IndexOf(c);
+            if(l > 0)
+            {
+                outnew[0] = s.Substring(0, l);
+                if(s.Length > l) outnew[1] = s.Substring(l + 1, s.Length - l - 1);
+                else outnew[1] = "";
+                return outnew;
+            }
+            else
+            {
+                outnew[0] = "";
+                if(s.Length > 0) outnew[1] = s.Substring(l + 1, s.Length - l - 1);
+                else outnew[1] = "";
+                return outnew;
+            }
         }
 
     }
