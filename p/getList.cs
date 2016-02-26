@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 using Aspose.Pdf;
 using Aspose.Pdf.InteractiveFeatures.Forms;
 using System.Xml;
+using Aspose.Pdf.Facades;
 
 namespace p
 {
     public class FieldValuePair {
+            public string path { get; set; }
             public string fieldName { get; set; }
             public string fieldValue { get; set; }
             public string fieldType { get; set; }
@@ -60,6 +62,7 @@ namespace p
                     FieldValuePair newpair = new FieldValuePair();
                     newpair.fieldName = formField;
                     newpair.fieldValue = pdfDocument.Form.XFA[formField];
+                    
                     returnValue.Add(newpair); 
                 }
             }
@@ -101,7 +104,7 @@ namespace p
         }
         private static void enumFields(XmlNode node, string path, ref List<FieldValuePair> rv)
         {
-            
+            FieldValuePair newpair = new FieldValuePair();
             //if this node has subnodes then call this routine recruively
             if(node.NodeType == XmlNodeType.Element && node.HasChildNodes)
             {
@@ -115,8 +118,9 @@ namespace p
             //if this text node then show field information
             else if(node.NodeType == XmlNodeType.Text)
             {
-                FieldValuePair newpair = new FieldValuePair();
-                newpair.fieldName = path;
+                
+                newpair.path = path;
+                newpair.fieldName = node.Name;
                 newpair.fieldValue = node.Value;
                 newpair.fieldType = node.NodeType.ToString();
                 rv.Add(newpair);
@@ -125,6 +129,7 @@ namespace p
           
         }
 
+    
 
     }
 }
