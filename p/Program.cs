@@ -115,7 +115,16 @@ namespace p
                         else Console.WriteLine("Wrong paremeters! \nUse: p -sg source.pdf to sign");
                         break;
                     case "-O":
-                        if(args.Length == 2) Process.Start(args[1]);
+                        if(args.Length == 2)
+                            try
+                            {
+                                Process.Start(args[1]);
+                            }
+                            catch(Exception e)
+                            {
+
+                                Console.WriteLine(args[1]+": "+e.Message);
+                            }
                         else Console.WriteLine("Use: p -o to open a file");
                         break;
                     default:

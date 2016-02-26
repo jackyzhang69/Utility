@@ -21,6 +21,7 @@ namespace p
             Console.WriteLine("use: p -c source.pdf destination.pdf to copy a original pdf to another same structure pdf");
             Console.WriteLine("use: p -cp source.pdf destination.pdf to copy a original pdf to another different structure pdf, but may have same elements");
             Console.WriteLine("use: p -sf "); // should be developed more
+            Console.WriteLine("use: p -o filename "); // Open a file, any kind
 
 
         }
