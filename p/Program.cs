@@ -107,12 +107,12 @@ namespace p
                         break;
                     case "-SG":
                         if(args.Length == 2) Fill.signForm(args[1]);
-                        else Console.WriteLine("Wrong paremeters! \nUse: p -sg source.pdf to sign");
+                        else Console.WriteLine("Wrong parameters! \nUse: p -sg source.pdf to sign");
                         break;
                     case "-SD":
                         // if(args.Length == 2)Console.WriteLine(int.Parse(args[1]).countryToString());/*DataOps.search(int.Parse(args[1]));*/
                         if(args.Length == 2) individule.showme(int.Parse(args[1]));
-                        else Console.WriteLine("Wrong paremeters! \nUse: p -sg source.pdf to sign");
+                        else Console.WriteLine("Wrong parameters! \nUse: p -sg source.pdf to sign");
                         break;
                     case "-O":
                         if(args.Length == 2)
