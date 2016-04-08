@@ -19,8 +19,8 @@ namespace p
 
     public class getList
     {
-        
-
+        static int i = 0;
+        static FieldValuePair newpair = new FieldValuePair();
 
         public static List<FieldValuePair> getlist(string filename)
         {
@@ -89,6 +89,7 @@ namespace p
         public static List<FieldValuePair> getXMLNodelist(string filename)
         {
             List<FieldValuePair> returnValue = new List<FieldValuePair>();
+           
             using(Document pdfDocument = new Document(filename))
             {
                 if(pdfDocument.Form.XFA != null)
@@ -97,6 +98,7 @@ namespace p
                     XmlNode data = pdfDocument.Form.XFA.Datasets;
                     //enumerate fields
                     enumFields(data, "", ref returnValue);
+                   
                 }
             }
             return returnValue;    
@@ -104,7 +106,7 @@ namespace p
         }
         private static void enumFields(XmlNode node, string path, ref List<FieldValuePair> rv)
         {
-            FieldValuePair newpair = new FieldValuePair();
+            
             //if this node has subnodes then call this routine recruively
             if(node.NodeType == XmlNodeType.Element && node.HasChildNodes)
             {
@@ -118,11 +120,12 @@ namespace p
             //if this text node then show field information
             else if(node.NodeType == XmlNodeType.Text)
             {
-                
+                Console.WriteLine(i);
+                i++;
                 newpair.path = path;
                 newpair.fieldName = node.Name;
                 newpair.fieldValue = node.Value;
-                newpair.fieldType = node.NodeType.ToString();
+                newpair.fieldType = node.InnerXml;
                 rv.Add(newpair);
             }
 

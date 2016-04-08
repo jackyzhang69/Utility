@@ -30,19 +30,19 @@ namespace p.Database
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InserttblCountry(tblCountry instance);
-    partial void UpdatetblCountry(tblCountry instance);
-    partial void DeletetblCountry(tblCountry instance);
     partial void InserttblPerson(tblPerson instance);
     partial void UpdatetblPerson(tblPerson instance);
     partial void DeletetblPerson(tblPerson instance);
     partial void InserttblPassport(tblPassport instance);
     partial void UpdatetblPassport(tblPassport instance);
     partial void DeletetblPassport(tblPassport instance);
+    partial void InserttblCountry(tblCountry instance);
+    partial void UpdatetblCountry(tblCountry instance);
+    partial void DeletetblCountry(tblCountry instance);
     #endregion
 		
 		public CommonDataContext() : 
-				base(global::p.Properties.Settings.Default.CommonConnectionString, mappingSource)
+				base(global::p.Properties.Settings.Default.CommonConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -71,14 +71,6 @@ namespace p.Database
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<tblCountry> tblCountries
-		{
-			get
-			{
-				return this.GetTable<tblCountry>();
-			}
-		}
-		
 		public System.Data.Linq.Table<tblPerson> tblPersons
 		{
 			get
@@ -94,114 +86,12 @@ namespace p.Database
 				return this.GetTable<tblPassport>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblCountry")]
-	public partial class tblCountry : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-		private int _CountryCode;
-		
-		private string _Country;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnCountryCodeChanging(int value);
-    partial void OnCountryCodeChanged();
-    partial void OnCountryChanging(string value);
-    partial void OnCountryChanged();
-    #endregion
-		
-		public tblCountry()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
+		public System.Data.Linq.Table<tblCountry> tblCountries
 		{
 			get
 			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountryCode", DbType="Int NOT NULL")]
-		public int CountryCode
-		{
-			get
-			{
-				return this._CountryCode;
-			}
-			set
-			{
-				if ((this._CountryCode != value))
-				{
-					this.OnCountryCodeChanging(value);
-					this.SendPropertyChanging();
-					this._CountryCode = value;
-					this.SendPropertyChanged("CountryCode");
-					this.OnCountryCodeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Country", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
-		public string Country
-		{
-			get
-			{
-				return this._Country;
-			}
-			set
-			{
-				if ((this._Country != value))
-				{
-					this.OnCountryChanging(value);
-					this.SendPropertyChanging();
-					this._Country = value;
-					this.SendPropertyChanged("Country");
-					this.OnCountryChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this.GetTable<tblCountry>();
 			}
 		}
 	}
@@ -220,17 +110,27 @@ namespace p.Database
 		
 		private string _LastName;
 		
-		private bool _IsAliasName;
+		private System.Nullable<System.DateTime> _DOB;
+		
+		private System.Nullable<int> _Gender;
+		
+		private System.Nullable<bool> _IsAliasName;
 		
 		private string _AliasLastName;
 		
 		private string _AliasFirstName;
 		
-		private System.Nullable<int> _UCI;
-		
-		private System.Nullable<System.DateTime> _DOB;
+		private string _UCI;
 		
 		private string _MarriageStatusId;
+		
+		private string _Phone;
+		
+		private string _Email;
+		
+		private System.Data.Linq.Binary _Photo;
+		
+		private System.Data.Linq.Binary _theSignature;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -244,18 +144,28 @@ namespace p.Database
     partial void OnMiddleNameChanged();
     partial void OnLastNameChanging(string value);
     partial void OnLastNameChanged();
-    partial void OnIsAliasNameChanging(bool value);
+    partial void OnDOBChanging(System.Nullable<System.DateTime> value);
+    partial void OnDOBChanged();
+    partial void OnGenderChanging(System.Nullable<int> value);
+    partial void OnGenderChanged();
+    partial void OnIsAliasNameChanging(System.Nullable<bool> value);
     partial void OnIsAliasNameChanged();
     partial void OnAliasLastNameChanging(string value);
     partial void OnAliasLastNameChanged();
     partial void OnAliasFirstNameChanging(string value);
     partial void OnAliasFirstNameChanged();
-    partial void OnUCIChanging(System.Nullable<int> value);
+    partial void OnUCIChanging(string value);
     partial void OnUCIChanged();
-    partial void OnDOBChanging(System.Nullable<System.DateTime> value);
-    partial void OnDOBChanged();
     partial void OnMarriageStatusIdChanging(string value);
     partial void OnMarriageStatusIdChanged();
+    partial void OnPhoneChanging(string value);
+    partial void OnPhoneChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnPhotoChanging(System.Data.Linq.Binary value);
+    partial void OnPhotoChanged();
+    partial void OntheSignatureChanging(System.Data.Linq.Binary value);
+    partial void OntheSignatureChanged();
     #endregion
 		
 		public tblPerson()
@@ -283,7 +193,7 @@ namespace p.Database
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="VarChar(20)")]
 		public string FirstName
 		{
 			get
@@ -323,7 +233,7 @@ namespace p.Database
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="VarChar(20)")]
 		public string LastName
 		{
 			get
@@ -343,8 +253,48 @@ namespace p.Database
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsAliasName", DbType="Bit NOT NULL")]
-		public bool IsAliasName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DOB", DbType="Date")]
+		public System.Nullable<System.DateTime> DOB
+		{
+			get
+			{
+				return this._DOB;
+			}
+			set
+			{
+				if ((this._DOB != value))
+				{
+					this.OnDOBChanging(value);
+					this.SendPropertyChanging();
+					this._DOB = value;
+					this.SendPropertyChanged("DOB");
+					this.OnDOBChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gender", DbType="Int")]
+		public System.Nullable<int> Gender
+		{
+			get
+			{
+				return this._Gender;
+			}
+			set
+			{
+				if ((this._Gender != value))
+				{
+					this.OnGenderChanging(value);
+					this.SendPropertyChanging();
+					this._Gender = value;
+					this.SendPropertyChanged("Gender");
+					this.OnGenderChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsAliasName", DbType="Bit")]
+		public System.Nullable<bool> IsAliasName
 		{
 			get
 			{
@@ -403,8 +353,8 @@ namespace p.Database
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UCI", DbType="Int")]
-		public System.Nullable<int> UCI
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UCI", DbType="Char(8)")]
+		public string UCI
 		{
 			get
 			{
@@ -419,26 +369,6 @@ namespace p.Database
 					this._UCI = value;
 					this.SendPropertyChanged("UCI");
 					this.OnUCIChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DOB", DbType="Date")]
-		public System.Nullable<System.DateTime> DOB
-		{
-			get
-			{
-				return this._DOB;
-			}
-			set
-			{
-				if ((this._DOB != value))
-				{
-					this.OnDOBChanging(value);
-					this.SendPropertyChanging();
-					this._DOB = value;
-					this.SendPropertyChanged("DOB");
-					this.OnDOBChanged();
 				}
 			}
 		}
@@ -459,6 +389,86 @@ namespace p.Database
 					this._MarriageStatusId = value;
 					this.SendPropertyChanged("MarriageStatusId");
 					this.OnMarriageStatusIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="VarChar(20)")]
+		public string Phone
+		{
+			get
+			{
+				return this._Phone;
+			}
+			set
+			{
+				if ((this._Phone != value))
+				{
+					this.OnPhoneChanging(value);
+					this.SendPropertyChanging();
+					this._Phone = value;
+					this.SendPropertyChanged("Phone");
+					this.OnPhoneChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(100)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this.OnEmailChanging(value);
+					this.SendPropertyChanging();
+					this._Email = value;
+					this.SendPropertyChanged("Email");
+					this.OnEmailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Photo", DbType="Image", UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary Photo
+		{
+			get
+			{
+				return this._Photo;
+			}
+			set
+			{
+				if ((this._Photo != value))
+				{
+					this.OnPhotoChanging(value);
+					this.SendPropertyChanging();
+					this._Photo = value;
+					this.SendPropertyChanged("Photo");
+					this.OnPhotoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_theSignature", DbType="Image", UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary theSignature
+		{
+			get
+			{
+				return this._theSignature;
+			}
+			set
+			{
+				if ((this._theSignature != value))
+				{
+					this.OntheSignatureChanging(value);
+					this.SendPropertyChanging();
+					this._theSignature = value;
+					this.SendPropertyChanged("theSignature");
+					this.OntheSignatureChanged();
 				}
 			}
 		}
@@ -833,6 +843,116 @@ namespace p.Database
 					this._IssueCountryId = value;
 					this.SendPropertyChanged("IssueCountryId");
 					this.OnIssueCountryIdChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tblCountry")]
+	public partial class tblCountry : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private int _CountryCode;
+		
+		private string _Country;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnCountryCodeChanging(int value);
+    partial void OnCountryCodeChanged();
+    partial void OnCountryChanging(string value);
+    partial void OnCountryChanged();
+    #endregion
+		
+		public tblCountry()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CountryCode", DbType="Int NOT NULL")]
+		public int CountryCode
+		{
+			get
+			{
+				return this._CountryCode;
+			}
+			set
+			{
+				if ((this._CountryCode != value))
+				{
+					this.OnCountryCodeChanging(value);
+					this.SendPropertyChanging();
+					this._CountryCode = value;
+					this.SendPropertyChanged("CountryCode");
+					this.OnCountryCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Country", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string Country
+		{
+			get
+			{
+				return this._Country;
+			}
+			set
+			{
+				if ((this._Country != value))
+				{
+					this.OnCountryChanging(value);
+					this.SendPropertyChanging();
+					this._Country = value;
+					this.SendPropertyChanged("Country");
+					this.OnCountryChanged();
 				}
 			}
 		}

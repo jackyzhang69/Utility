@@ -10,5 +10,13 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=JackyPc\SQLExpress;Initial Catalog=Common;Persist Security Info=True;User ID=sa;Password=Zxy690211</Value>
     </Setting>
+    <Setting Name="CommonConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=immigration.database.windows.net;Initial Catalog=Common;User ID=Jacky;Password=Zxy690211;Connect Timeout=60&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=immigration.database.windows.net;Initial Catalog=Common;User ID=Jacky;Password=Zxy690211;Connect Timeout=60</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

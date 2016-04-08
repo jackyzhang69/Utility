@@ -18,3 +18,4 @@ C:\GitHub\Utility\p\bin\Debug\p.exe
 C:\GitHub\Utility\p\bin\Debug\p.pdb
 C:\GitHub\Utility\p\bin\Debug\Aspose.Pdf.dll
 C:\GitHub\Utility\p\obj\Debug\p.csprojResolveAssemblyReference.cache
+C:\GitHub\utility\p\bin\Debug\Aspose.Pdf.xml

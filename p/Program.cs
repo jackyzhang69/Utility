@@ -19,6 +19,11 @@ namespace p
 
         static void Main(string[] args)
         {
+            args = new string[4];
+            args[0] = "-lf";
+            args[1] = "emp5593.pdf";
+            args[2] = "e.csv";
+            args[3] = "-xml";
            
             // Create a PDF license object
             Aspose.Pdf.License license = new Aspose.Pdf.License();
@@ -51,7 +56,11 @@ namespace p
                                 break;
                             case 4:
                                 if(args[3].ToUpper() == "-XML")
-                                    try { output = getList.getXMLNodelist(args[1]); Outputs.Output(output, args[2]); Console.WriteLine(Args[2] + " was created!"); }
+                                    try {
+                                        output = getList.getXMLNodelist(args[1]);
+                                        Outputs.Output(output, args[2]);
+                                        Console.WriteLine(Args[2] + " was created!");
+                                    }
                                     catch(Exception e) { Console.WriteLine(e.Message); }
                                 break;
                             default:

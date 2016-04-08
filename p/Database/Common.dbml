@@ -1,24 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Common" Class="CommonDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=JackyPc\SQLExpress;Initial Catalog=Common;Persist Security Info=True;User ID=sa" SettingsObjectName="p.Properties.Settings" SettingsPropertyName="CommonConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.tblCountry" Member="tblCountries">
-    <Type Name="tblCountry">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="CountryCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Country" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
+  <Connection Mode="AppSettings" ConnectionString="Data Source=immigration.database.windows.net;Initial Catalog=Common;User ID=Jacky;Connect Timeout=60" SettingsObjectName="p.Properties.Settings" SettingsPropertyName="CommonConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tblPerson" Member="tblPersons">
     <Type Name="tblPerson">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="FirstName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="MiddleName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="LastName" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="IsAliasName" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Gender" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsAliasName" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="AliasLastName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="AliasFirstName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="UCI" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DOB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UCI" Type="System.String" DbType="Char(8)" CanBeNull="true" />
       <Column Name="MarriageStatusId" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Photo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="theSignature" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
     </Type>
   </Table>
   <Table Name="dbo.tblPassport" Member="tblPassports">
@@ -37,6 +35,13 @@
       <Column Name="ExpiryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="IsValid" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="IssueCountryId" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCountry" Member="tblCountries">
+    <Type Name="tblCountry">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

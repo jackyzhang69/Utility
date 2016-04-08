@@ -33,5 +33,16 @@ namespace p.Properties {
                 return ((string)(this["CommonConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=immigration.database.windows.net;Initial Catalog=Common;User ID=Jacky" +
+            ";Password=Zxy690211;Connect Timeout=60")]
+        public string CommonConnectionString1 {
+            get {
+                return ((string)(this["CommonConnectionString1"]));
+            }
+        }
     }
 }
